@@ -21,7 +21,7 @@ func _get_property_info(prop : String):
 				"visible": my_int > 0
 			}
 	pass
-``
+```
 
 ## Features
 
