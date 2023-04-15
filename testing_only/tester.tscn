@@ -1,9 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3m67wirij8x3"]
+[gd_scene load_steps=3 format=3 uid="uid://b3m67wirij8x3"]
 
 [ext_resource type="Script" path="res://testing_only/Node2D.gd" id="1_1c7or"]
+[ext_resource type="Texture2D" uid="uid://drj0wut4mgaec" path="res://testing_only/icon.svg" id="2_ifd7k"]
 
 [node name="tester" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Myself" type="Node2D" parent="."]
+position = Vector2(407, 153)
 script = ExtResource("1_1c7or")
-my_int = 2
+my_int = 1
+my_float2 = 1.77727
+my_float3 = -1.28351
+my_action3 = &"ui_text_dedent"
+my_boolean = true
+
+[node name="TextureRect" type="TextureRect" parent="Myself"]
+offset_left = -67.0
+offset_top = -53.0
+offset_right = 61.0
+offset_bottom = 75.0
+texture = ExtResource("2_ifd7k")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 614.0
+offset_top = 96.0
+offset_right = 893.0
+offset_bottom = 189.0
+
+[node name="CheckButton" type="CheckButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -12.0
+offset_right = 22.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

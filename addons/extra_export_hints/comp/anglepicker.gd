@@ -29,12 +29,14 @@ func _gui_input(event):
 			var angle : float = mmouse.angle()
 			if segments > 0:
 				angle = snappedf(angle, TAU/segments)
+			var new_value
 			if return_vector:
-				get_parent().emit_changed(get_parent().get_edited_property(), Vector2.RIGHT.rotated(angle) * maximum_value)
-				changed.emit()
+				new_value = Vector2.RIGHT.rotated(angle) * maximum_value
 			else:
-				get_parent().emit_changed(get_parent().get_edited_property(), angle/TAU * maximum_value)
-				changed.emit()
+				new_value = angle/TAU * maximum_value
+			get_parent().get_edited_object().set(get_parent().get_edited_property(), new_value)
+			get_parent().emit_changed(get_parent().get_edited_property(), new_value, &"", true)
+			changed.emit()
 			queue_redraw()
 
 func _draw():
