@@ -2,11 +2,11 @@
 
 ## Description
 
-Add your own custom export editors using `_get_property_info`. 
+Add your own custom export editors using `_get_property_info(property_name : String) -> Dictionary`. 
 
 It's quicker than `_get_property_list` for simple cases, but both can be combined;
 
-```gd
+```gdscript
 @export var my_int : int
 @export var my_float2 : float
 
@@ -41,7 +41,7 @@ func _get_property_info(prop : String):
 
 To make a property be handled by a custom editor.
 
-```
+```gdscript
 return {
 	"editor": <editor_name>
 }
