@@ -44,18 +44,18 @@ func _get_property_info(prop : String):
 
 ## Builtin Hints
 
-- "visible": If false, the property won't show in the inspector.
+- `visible`: If false, the property won't show in the inspector.
 
-- "update_inspector": If present, the property will update the inspector when edited.<br/>
+- `update_inspector`: If present, the property will update the inspector when edited.<br/>
 	Useful if this property updates the visibility status of another.
 
-- "buttons": An array of `Dictionary`s that will be added as buttons.<br/>
+- `buttons`: An array of `Dictionary`s that will be added as buttons.<br/>
 	You must specify a property 'callback' for the button to work.<br/>
 	This callback must take a single argument, which is the button you pressed.<br/>
 	
 	You can optionally specify 'label', 'visible' and 'color.'
 
-- "warnings": An array of `Dictionary`s that will be added as labels.<br/>
+- `warnings`: An array of `Dictionary`s that will be added as labels.<br/>
 	You must specify a property 'label' for the warning to work.
 	
 	You can optionally specify 'visible' and 'color.'
@@ -74,11 +74,11 @@ return {
 }
 ```
 
-- "check_button"
+- `check_button`
 	This editor will make so booleans display a check button
 	instead of a checkbox.
 
-- "direction"
+- `direction`
 	Will add a spinny slider you can use to edit angles.
 	
 	Under this editor, you can also specify:
@@ -90,7 +90,7 @@ return {
 		- segments = If bigger than 0, the editor will snaps to <segments> fractions of a whole turn;
 		
 
-- "fuzzy_search"
+- `fuzzy_search`
 	Will add a button and a new Window for searching entries to a large enum.
 	It's much better than a gigantic option menu popup.
 	
