@@ -46,16 +46,16 @@ func _get_property_info(prop : String):
 
 - "visible": If false, the property won't show in the inspector.
 
-- "update_inspector": If present, the property will update the inspector when edited.
+- "update_inspector": If present, the property will update the inspector when edited.<br/>
 	Useful if this property updates the visibility status of another.
 
-- "buttons": An array of `Dictionary`s that will be added as buttons.
-	You must specify a property 'callback' for the button to work.
-	This callback must take a single argument, which is the button you pressed.
+- "buttons": An array of `Dictionary`s that will be added as buttons.<br/>
+	You must specify a property 'callback' for the button to work.<br/>
+	This callback must take a single argument, which is the button you pressed.<br/>
 	
 	You can optionally specify 'label', 'visible' and 'color.'
 
-- "warnings": An array of `Dictionary`s that will be added as labels.
+- "warnings": An array of `Dictionary`s that will be added as labels.<br/>
 	You must specify a property 'label' for the warning to work.
 	
 	You can optionally specify 'visible' and 'color.'
@@ -82,15 +82,20 @@ return {
 	Will add a spinny slider you can use to edit angles.
 	
 	Under this editor, you can also specify:
+		
 		- return_type = TYPE_VECTOR2 or TYPE_FLOAT;
+		
 		- maximum_value = The length of your vector, or the maximum value of your float value;
+		
 		- segments = If bigger than 0, the editor will snaps to <segments> fractions of a whole turn;
+		
 
 - "fuzzy_search"
 	Will add a button and a new Window for searching entries to a large enum.
 	It's much better than a gigantic option menu popup.
 	
 	- If specified, "items" is an optional property it'll read from to determine the contents of the enum;
+	
 	- If specified, "editor_icon" will allow setting an icon to the picker's button;
 
 ## Tips
