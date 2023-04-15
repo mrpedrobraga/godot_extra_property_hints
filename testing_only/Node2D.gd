@@ -9,6 +9,20 @@ extends Node2D
 
 func _get_property_info(prop : String):
 	match prop:
+		"my_int":
+			return {
+				"update_inspector": true,
+				"warnings": [
+					{
+						"label": "This value must be positive.",
+						"visible": my_int <= 0
+					},
+					{
+						"label": "I wuv you.",
+						"color": Color(0.1171875, 0.68963623046875, 1)
+					}
+				]
+			}
 		"my_float2":
 			return {
 				"visible": my_int > 0,
@@ -20,4 +34,34 @@ func _get_property_info(prop : String):
 						"label": "Decrement"}
 				]
 			}
+		"my_float3":
+			return {
+				"editor": "direction",
+				"color": Color(0.57670986652374, 0.84044259786606, 0.12374169379473),
+				"segments": 8
+			}
+		"rotation":
+			return {
+				"editor": "direction",
+				"segments": 4
+			}
+		"my_action3":
+			return {
+				"editor": "fuzzy_search",
+				"items": InputMap.get_actions(),
+				"color": Color(0, 0.69999980926514, 1)
+			}
+		"my_boolean":
+			return {
+				"editor": "check_button",
+				"color": Color(1, 0, 0.51666688919067)
+			}
+		
+		_:
+			var plist := get_property_list()
+			for i in plist:
+				if i.name == prop and i.type == TYPE_BOOL:
+					return {
+						"editor": "check_button"
+					}
 	pass
