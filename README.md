@@ -2,7 +2,7 @@
 
 ## Description
 
-Add your own custom export editors using `_get_property_info(property_name : String) -> Dictionary`. 
+Add your own custom export editors using `_get_property_info(property_name : String) -> Dictionary` inside of `custom_editors.gd`.
 
 
 ```gdscript
