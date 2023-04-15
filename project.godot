@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Template"
+config/name="Extra Export Hints"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/plugin_refresher/plugin.cfg", "res://addons/my_addon/plugin.cfg")
+enabled=PackedStringArray("res://addons/plugin_refresher/plugin.cfg", "res://addons/extra_export_hints/plugin.cfg")
 
 [rendering]
 
