@@ -105,7 +105,7 @@ of the match statement.
 
 Additionally, you can do some type checking.
 
-```gdscript:
+```gdscript
 # Display all boolean properties as check buttons.
 func _get_property_info(prop : String):
 	match prop:

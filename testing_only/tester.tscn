@@ -8,9 +8,9 @@
 [node name="Myself" type="Node2D" parent="."]
 position = Vector2(407, 153)
 script = ExtResource("1_1c7or")
-my_int = 1
-my_float2 = 1.77727
-my_float3 = -1.28351
+my_int = 2
+my_float2 = 0.523919
+my_float3 = -0.402321
 my_action3 = &"ui_text_dedent"
 my_boolean = true
 
